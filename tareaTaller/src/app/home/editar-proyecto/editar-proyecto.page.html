@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Editar Proyecto
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Editar Proyecto</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+
+    <ion-grid>
+      <ion-row>
+      <ion-col><ion-button (click)="getProyecto())">Cargar Datos</ion-button></ion-col>
+      <ion-col><ion-button (click)="getProyecto()">Nuevo Proyecto</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <br>
+      <ion-grid>
+        <ion-row>
+        <ion-col>Boletin</ion-col>
+        <ion-col>Proyecto</ion-col>
+        <ion-col>Descripcion</ion-col>
+        <ion-col>Voto Si</ion-col>
+        <ion-col>Voto No</ion-col>
+
+      </ion-row>
+      <ion-item *ngFor="let proyecto of proyectos">
+        <ion-col value="id">{{proyecto['id']}}</ion-col>
+        <ion-col value="proyecto_ley">{{proyecto['proyecto_ley']}}</ion-col>
+        <ion-col value="descripcion">{{proyecto['descripcion']}}</ion-col>
+        <ion-col value="si">{{proyecto['si']}}</ion-col>
+        <ion-col value="no">{{proyecto['']}}</ion-col>
+
+          <ion-button (click)="editProyecto(proyecto['id'])">Editar</ion-button>
+          <ion-button (click)="editProyecto(proyecto['id'])">Eliminar</ion-button>
+        <ion-col>
+        <ion-input value="">Ingrese nuevo valor</ion-input>
+        <ion-button (click)="getProyecto(proyecto['id'])">Actualizar</ion-button>
+        <ion-button (click)="getProyecto(proyecto['id'])">Eliminar</ion-button>
+      </ion-col>
+      </ion-item>
+    </ion-grid>
+  </ion-list>
+  <ion-button (click)="salir()">Salir</ion-button>
+  <ion-button (click)="volver()">Volver</ion-button>
+  </ion-content>
