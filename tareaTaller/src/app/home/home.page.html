@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Controles Veterinarios
+    </ion-title>
+    <ion-button slot="start" (click)="getMascotas()">Cargar Datos</ion-button>
+    <ion-button slot="start" (click)="getMascotas()">Nuevo Registro</ion-button>
+    <ion-button slot="start" (click)="salir()">Salir</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+[scrollEvents]="true"
+class="ion-padding">
+
+<ion-list>
+  <br>
+  <ion-grid>
+    <ion-row>
+    <ion-col>Mascota</ion-col>
+    <ion-col>Cuidador/a</ion-col>    
+    <ion-col>Diagnostico</ion-col>
+    <ion-col>Accion</ion-col>
+
+
+
+  </ion-row>
+
+  <ion-item *ngFor="let mascota of mascotas">
+    <ion-col value="nombre">{{mascota['nombre']}}</ion-col>
+    <ion-col value="cuidador">{{mascota['cuidador']}}</ion-col>
+    <ion-col value="diagnostico">{{mascota['diagnostico']}}</ion-col>
+    <ion-col>
+      <ion-button>Editar</ion-button> <!--(click)="editProyecto(proyecto['id'])""-->
+      <ion-button (click)="getMascota(mascota['id'])">Detalle</ion-button> 
+
+    </ion-col>
+  </ion-item>
+
+</ion-grid>
+
+</ion-list>
+
+
+</ion-content>

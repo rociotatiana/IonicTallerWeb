@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Detalle Consulta</ion-title>
+      <ion-buttons>
+          <ion-back-button defaulttHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item ngIf mascotas.id = id>
+    <ion-col value="nombre">{{mascotas.nombre}}</ion-col>
+    <ion-col value="cuidador">hjklj</ion-col>
+    <ion-col value="diagnostico">hjkhjkh</ion-col>
+    <ion-col>
+      <ion-button>Editar</ion-button> <!--(click)="editProyecto(proyecto['id'])""-->
+
+
+    </ion-col>
+  </ion-item>
+</ion-content>
