@@ -6,9 +6,9 @@ App para registro de controles veterinarios para una clinica veterinaria.
 Video de Youtube demostrativo: https://youtu.be/FXbP9vpitkE 
 
 ## Stack
-Ionic 
-Angular
-Javascript
+- Ionic
+- Angular
+- Javascript
 
 # Probar esta app
 ## Paso 1: Clonar Repositorio
